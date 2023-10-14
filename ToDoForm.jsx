@@ -1,7 +1,7 @@
 import React from "react";
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Alert } from 'react-native';
 
-const ToDoFrom = () => {
+const ToDoForm = () => {
     return (
         <View style={styles.form}>
         <TextInput
@@ -13,23 +13,22 @@ const ToDoFrom = () => {
     );
 };
 
-const style = StyleSheet.create({
-    from: {
+const styles = StyleSheet.create({
+    form: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         marginHorizontal: 20,
         marginTop: 20,
-    },
-    input: {
+      },
+      input: {
         flex: 1,
         borderWidth: 1,
         borderColor: '#ccc',
         paddingHorizontal: 10,
-        paddingVertical: 10,
         paddingVertical: 5,
         marginRight: 10,
-    },
+      },
 });
 
 export default ToDoForm;
