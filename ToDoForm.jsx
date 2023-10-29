@@ -2,15 +2,26 @@ import React from "react";
 import { View, TextInput, Button, StyleSheet, Alert } from 'react-native';
 
 const ToDoForm = () => {
-    return (
-        <View style={styles.form}>
-        <TextInput
-          style={styles.input}
-          placeholder="Add a new task..."
-        />
-        <Button title="Add" />
-      </View>
-    );
+  const [taskText, setTaskText] = useState('');
+
+  const handleAddTask = () => {
+    if (taskText.trim() === '') {
+      Alert.alert('Error', 'Task cannot be empty');
+    } else {
+      addTask(taskText);
+      setTaskText('');
+    }
+  };
+
+  return (
+      <View style={styles.form}>
+      <TextInput
+        style={styles.input}
+        placeholder="Add a new task..."
+      />
+      <Button title="Add" />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
