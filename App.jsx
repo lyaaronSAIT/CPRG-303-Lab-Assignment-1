@@ -18,9 +18,7 @@ function App() {
   ]);
 
   const addTask = (taskText) => {
-    if (taskText.trim() !== '' && !tasks.includes(taskText)) {
       setTasks([...tasks, taskText]);
-    }
   };
 
   return (
